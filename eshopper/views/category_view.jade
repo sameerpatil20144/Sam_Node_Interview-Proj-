@@ -1,0 +1,8 @@
+extends layout
+block sameer
+    form(ng-controller = "category")
+        .form-group
+            label(for='email') Email address:
+            input#email.form-control(type='text',ng-model="cat")
+        button.btn.btn-default(type='button',ng-click="add_category()") Submit
+        {{err}}

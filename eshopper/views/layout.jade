@@ -1,0 +1,393 @@
+doctype html
+html(lang='en',ng-app="eshopper")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Home | E-Shopper
+    link(href='/public/stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='/public/stylesheets/font-awesome.min.css', rel='stylesheet')
+    link(href='/public/stylesheets/prettyPhoto.css', rel='stylesheet')
+    link(href='/public/stylesheets/price-range.css', rel='stylesheet')
+    link(href='/public/stylesheets/animate.css', rel='stylesheet')
+    link(href='/public/stylesheets/main.css', rel='stylesheet')
+    link(href='/public/stylesheets/responsive.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='javascripts/html5shiv.js')
+      script(src='javascripts/respond.min.js')
+    link(rel='shortcut icon', href='/public/images/ico/favicon.ico')
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='/public/images/ico/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/public/images/ico/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/public/images/ico/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='/public/images/ico/apple-touch-icon-57-precomposed.png')
+  // /head
+  body
+    header#header
+      // header
+      .header_top
+        // header_top
+        .container
+          .row
+            .col-sm-6
+              .contactinfo
+                ul.nav.nav-pills
+                  li
+                    a(href='#')
+                      i.fa.fa-phone
+                      |  +2 95 01 88 821
+                  li
+                    a(href='#')
+                      i.fa.fa-envelope
+                      |  info@domain.com
+            .col-sm-6
+              .social-icons.pull-right
+                ul.nav.navbar-nav
+                  li
+                    a(href='#')
+                      i.fa.fa-facebook
+                  li
+                    a(href='#')
+                      i.fa.fa-twitter
+                  li
+                    a(href='#')
+                      i.fa.fa-linkedin
+                  li
+                    a(href='#')
+                      i.fa.fa-dribbble
+                  li
+                    a(href='#')
+                      i.fa.fa-google-plus
+      // /header_top
+      .header-middle
+        // header-middle
+        .container
+          .row
+            .col-sm-4
+              .logo.pull-left
+                a(href='index.html')
+                  img(src='/public/images/home/logo.png', alt='')
+              .btn-group.pull-right
+                .btn-group
+                  button.btn.btn-default.dropdown-toggle.usa(type='button', data-toggle='dropdown')
+                    | USA
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Canada
+                    li
+                      a(href='#') UK
+                .btn-group
+                  button.btn.btn-default.dropdown-toggle.usa(type='button', data-toggle='dropdown')
+                    | DOLLAR
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Canadian Dollar
+                    li
+                      a(href='#') Pound
+            .col-sm-8
+              .shop-menu.pull-right
+                ul.nav.navbar-nav
+                  li
+                    a(href='#')
+                      i.fa.fa-user
+                      |  Account
+                  li
+                    a(href='#')
+                      i.fa.fa-star
+                      |  Wishlist
+                  li
+                    a(href='/category')
+                      i.fa.fa-crosshairs
+                      |  +1 Category
+                  li
+                    a(href='cart.html')
+                      i.fa.fa-shopping-cart
+                      |  Cart
+                  li
+                    a(href='login.html')
+                      i.fa.fa-lock
+                      |  Login
+      // /header-middle
+      .header-bottom
+        // header-bottom
+        .container
+          .row
+            .col-sm-9
+              .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+              .mainmenu.pull-left
+                ul.nav.navbar-nav.collapse.navbar-collapse
+                  li
+                    a.active(href='index.html') Home
+                  li.dropdown
+                    a(href='#')
+                      | Shop
+                      i.fa.fa-angle-down
+                    ul.sub-menu(role='menu')
+                      li
+                        a(href='shop.html') Products
+                      li
+                        a(href='product-details.html') Product Details
+                      li
+                        a(href='checkout.html') Checkout
+                     
+                        a(href='cart.html') Cart
+                      li
+                        a(href='login.html') Login
+                  li.dropdown
+                    a(href='#')
+                      | Blog
+                      i.fa.fa-angle-down
+                    ul.sub-menu(role='menu')
+                      li
+                        a(href='blog.html') Blog List
+                      li
+                        a(href='blog-single.html') Blog Single
+                  li
+                    a(href='404.html') 404
+                  li
+                    a(href='contact-us.html') Contact
+            .col-sm-3
+              .search_box.pull-right
+                input(type='text', placeholder='Search')
+      // /header-bottom
+    // /header
+    section#slider
+      // slider
+      .container
+        .row
+          .col-sm-12
+            #slider-carousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#slider-carousel', data-slide-to='0')
+                li(data-target='#slider-carousel', data-slide-to='1')
+                li(data-target='#slider-carousel', data-slide-to='2')
+              .carousel-inner
+                .item.active
+                  .col-sm-6
+                    h1
+                      span E
+                      | -SHOPPER
+                    h2 Free E-Commerce Template
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    button.btn.btn-default.get(type='button') Get it now
+                  .col-sm-6
+                    img.girl.img-responsive(src='/public/images/home/11.jpg', alt='')
+                    img.pricing(src='/public/images/home/pricing.png', alt='')
+                .item
+                  .col-sm-6
+                    h1
+                      span E
+                      | -SHOPPER
+                    h2 100% Responsive Design
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    button.btn.btn-default.get(type='button') Get it now
+                  .col-sm-6
+                    img.girl.img-responsive(src='/public/images/home/12.jpg', alt='')
+                    img.pricing(src='/public/images/home/pricing.png', alt='')
+                .item
+                  .col-sm-6
+                    h1
+                      span E
+                      | -SHOPPER
+                    h2 Free Ecommerce Template
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    button.btn.btn-default.get(type='button') Get it now
+                  .col-sm-6
+                    img.girl.img-responsive(src='/public/images/home/13.png', alt='')
+                    img.pricing(src='/public/images/home/pricing.png', alt='')
+              a.left.control-carousel.hidden-xs(href='#slider-carousel', data-slide='prev')
+                i.fa.fa-angle-left
+              a.right.control-carousel.hidden-xs(href='#slider-carousel', data-slide='next')
+                i.fa.fa-angle-right
+    // /slider
+    section
+      .container
+        .row
+        .container
+            div
+              h4(style='color:orange;padding:10px 70px') CATEGORY
+          .col-sm-3(ng-controller="category")
+            .left-sidebar
+              .panel.panel-default(ng-repeat = "ans in records")
+                  .panel-heading
+                    h4.panel-title
+                      a(href='#') {{ans.catname}}
+
+                
+                  
+              // /category-products(make controller to print with ng-repeat)
+              .brands_products(ng-controller = "brands")
+                // brands_products
+                h2 Brands
+                .brands-name
+                  ul.nav.nav-pills.nav-stacked
+                    li(ng-repeat = "ans in records")
+                      a(href='#')
+                        span.pull-right (50)
+                        | {{ans.brname}}
+                    
+              // /brands_products
+              .price-range
+                // price-range
+                h2 Price Range
+                .well.text-center
+                  input#sl2.span2(type='text', value='', data-slider-min='0', data-slider-max='600', data-slider-step='5', data-slider-value='[250,450]')
+                  br
+                  b.pull-left $ 0
+                  b.pull-right $ 600
+              // /price-range
+              .shipping.text-center
+                // shipping
+                img(src='/public/images/home/shipping.jpg', alt='')
+              // /shipping
+           block sameer
+    footer#footer
+      // Footer
+      .footer-top
+        .container
+          .row
+            .col-sm-2
+              .companyinfo
+                h2
+                  span e
+                  | -shopper
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor
+            .col-sm-7
+              .col-sm-3
+                .video-gallery.text-center
+                  a(href='#')
+                    .iframe-img
+                      img(src='/public/images/home/iframe1.png', alt='')
+                    .overlay-icon
+                      i.fa.fa-play-circle-o
+                  p Circle of Hands
+                  h2 24 DEC 2014
+              .col-sm-3
+                .video-gallery.text-center
+                  a(href='#')
+                    .iframe-img
+                      img(src='/public/images/home/iframe2.png', alt='')
+                    .overlay-icon
+                      i.fa.fa-play-circle-o
+                  p Circle of Hands
+                  h2 24 DEC 2014
+              .col-sm-3
+                .video-gallery.text-center
+                  a(href='#')
+                    .iframe-img
+                      img(src='/public/images/home/iframe3.png', alt='')
+                    .overlay-icon
+                      i.fa.fa-play-circle-o
+                  p Circle of Hands
+                  h2 24 DEC 2014
+              .col-sm-3
+                .video-gallery.text-center
+                  a(href='#')
+                    .iframe-img
+                      img(src='/public/images/home/iframe4.png', alt='')
+                    .overlay-icon
+                      i.fa.fa-play-circle-o
+                  p Circle of Hands
+                  h2 24 DEC 2014
+            .col-sm-3
+              .address
+                img(src='/public/images/home/map.png', alt='')
+                p 505 S Atlantic Ave Virginia Beach, VA(Virginia)
+      .footer-widget
+        .container
+          .row
+            .col-sm-2
+              .single-widget
+                h2 Service
+                ul.nav.nav-pills.nav-stacked
+                  li
+                    a(href='#') Online Help
+                  li
+                    a(href='#') Contact Us
+                  li
+                    a(href='#') Order Status
+                  li
+                    a(href='#') Change Location
+                  li
+                    a(href='#') FAQ’s
+            .col-sm-2
+              .single-widget
+                h2 Quock Shop
+                ul.nav.nav-pills.nav-stacked
+                  li
+                    a(href='#') T-Shirt
+                  li
+                    a(href='#') Mens
+                  li
+                    a(href='#') Womens
+                  li
+                    a(href='#') Gift Cards
+                  li
+                    a(href='#') Shoes
+            .col-sm-2
+              .single-widget
+                h2 Policies
+                ul.nav.nav-pills.nav-stacked
+                  li
+                    a(href='#') Terms of Use
+                  li
+                    a(href='#') Privecy Policy
+                  li
+                    a(href='#') Refund Policy
+                  li
+                    a(href='#') Billing System
+                  li
+                    a(href='#') Ticket System
+            .col-sm-2
+              .single-widget
+                h2 About Shopper
+                ul.nav.nav-pills.nav-stacked
+                  li
+                    a(href='#') Company Information
+                  li
+                    a(href='#') Careers
+                  li
+                    a(href='#') Store Location
+                  li
+                    a(href='#') Affillate Program
+                  li
+                    a(href='#') Copyright
+            .col-sm-3.col-sm-offset-1
+              .single-widget
+                h2 About Shopper
+                form.searchform(action='#')
+                  input(type='text', placeholder='Your email address')
+                  button.btn.btn-default(type='submit')
+                    i.fa.fa-arrow-circle-o-right
+                  p
+                    | Get the most recent updates from 
+                    br
+                    | our site and be updated your self...
+      .footer-bottom
+        .container
+          .row
+            p.pull-left Copyright © 2013 E-SHOPPER Inc. All rights reserved.
+            p.pull-right
+              | Designed by 
+              span
+                a(target='_blank', href='http://www.themeum.com') Themeum
+    // /Footer
+    script(src='/public/javascripts/jquery.js')
+    script(src='/public/javascripts/bootstrap.min.js')
+    script(src='/public/javascripts/jquery.scrollUp.min.js')
+    script(src='/public/javascripts/price-range.js')
+    script(src='/public/javascripts/jquery.prettyPhoto.js')
+    script(src='/public/javascripts/main.js')
+    script(src='/public/javascripts/angular.min.js')
+    script(src='/public/javascripts/eshopper.js')
+
